@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Navigation Bars in CSS</title>
+    <style>
+      
+
+        /* Style for Horizontal Navigation Bar */
+        .horizontal-nav {
+            list-style-type: none;
+            margin: 0 px;
+            padding: 0 px;
+            overflow: hidden;
+            background-color: rgb(168, 41, 41);
+            text-align: center;
+        }
+        .horizontal-nav li { 
+	    margin-left: 100px;
+            float: left; }
+        .horizontal-nav li a {
+            display: inline-block;
+            color: rgb(243, 183, 73);
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .horizontal-nav li a:hover {
+            background-color: rgb(225, 202, 88);
+            color: rgb(15, 62, 82);
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 150px; /* Space for vertical bar */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div>
+    <!-- Horizontal Navigation Bar -->
+    <h2 style = "margin: -5px 0px 0px 350px;">Horizontal Navigation Bar</h2>
+    <ul class="horizontal-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#careers">Careers</a></li>
+    </ul>
+</div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h3>My Name is Debajyoti Bhakta </h3>
+        <p>I am from Kolkata</p>
+        <p>I am currently continuing my B.Tech. at Institute of Technical Education and Research S'O'A DU</p>
+    </div>
+
+</body>
+</html>
