@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Navigation Bars in CSS</title>
+    <style>
+        /* Style for Vertical Navigation Bar */
+        .vertical-nav {
+            list-style-type: none;
+            padding: 0;
+            width: 150px;
+            background-color: rgb(152, 217, 158);
+            position: fixed; 
+            height: 100%; 
+            overflow: auto;
+        }
+        .vertical-nav li a {
+            display: block;
+            color: rgb(13, 0, 255);
+            padding: 10px;
+            text-decoration: none;
+        }
+        .vertical-nav li a:hover {
+            background-color: bisque;
+            color: rgb(2, 1, 5);
+        }
+
+      
+
+        /* Content Area */
+        .content {
+            margin-left: 150px; /* Space for vertical bar */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <!-- Vertical Navigation Bar -->
+    <h2>Vertical  Navigation Bar</h2>
+
+    <ul class="vertical-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#careers">Careers</a></li>
+    </ul>
+</div>
+
+
+
+ <!-- Main Content -->
+    <div class="content">
+        <h3>My Name is Debajyoti Bhakta </h3>
+        <p>I am from Kolkata</p>
+        <p>I am currently continuing my B.Tech. at Institute of Technical Education and Research S'O'A DU</p>
+    </div>
+
+</body>
+</html>
