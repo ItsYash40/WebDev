@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Getting attributes in jQuery</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+               $(document).ready(function(){
+                    $("#b1").click(function(){
+                                 alert("Text: "+$("#par").text());
+                      }); 
+               $("#b2").click(function(){
+                                 alert("HTML: "+$("#par").html());
+                   });
+               $("#b3").click(function(){
+                                 alert("Value: "+$("#txt").val());
+                   });
+               $("#b4").click(function(){
+                                 alert($("#soa ").attr("href"));
+                   });
+});
+</script>
+</head>
+<body>
+      <p id="par"> Hi, I'm in currently a<b> B.Tech</b><i> student</i></p>
+<button id="b1"> Display text</button>
+<button id="b2"> Display HTML code</button>
+
+<p> Enter your subject name:<input type="text" id="txt" value="Full Stack Development"> <br>
+<button id="b3"> Show input Values</button>
+<p> <a href="https://www.soa.ac.in/iter" id="soa">ITER S'O'A DU<p>
+<button id="b4"> Show link href</button>
+</body>
+</html>
