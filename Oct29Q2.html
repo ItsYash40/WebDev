@@ -1,18 +1,35 @@
 <html>
 <head>
-<title>Getting attributes in jQuery</title>
+<title>Setting attributes in jQuery</title>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
                     $("#b1").click(function(){
-                                 alert("Text: "+$("#par").text());
+                                $("#par1").text("Hi student!")
                       }); 
-
+                  $("#b2").click(function(){
+                                $("#par2").html("<b><i>Hi student!</i></b>");
+                      }); 
+               $("#b3").click(function(){
+                             $("#txt") .val("Mayur Ramgir");
+                      }); 
+              $("#b4").click(function(){
+                             $("#go") .attr("href", "https://www.soa.ac.in/iter");
+                      }); 
+  }); 
 
 </script>
 </head>
 <body>
-      <p id="par"> This is font end.</p>
+      <p id="par1"> This is font end.</p>
+      <p id="par2"> This is Back end.</p>
+     <p> Input field: <input type="text" id="txt" value="Author"></p>
 
+<button id="b1"> Set text content</button>
+<button id="b2"> Set html content</button>
+<button id="b3"> Set input Values</button>
+
+<p> <a href="https://www.soa.ac.in/iter" id="go">ITER S'O'A DU<p>
+<button id="b3"> Change link url</button>
 </body>
 </html>
