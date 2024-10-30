@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Setting attributes in jQuery</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+                    $("#b1").click(function(){
+                                $("#d").remove();
+                      }); 
+     $("#b2").click(function(){
+                                $("p").remove(".b");
+                      }); 
+   $("#b3").click(function(){
+                                $("#e").empty();
+                      }); 
+    });
+</script>
+
+<style>
+       .b{
+color:blue; font-size:40px;}
+</style>
+</head>
+<body>
+  <div id="d" style="height: 150px; width: 150px; border 3px solid green; background-color:orange;">
+       This is a removeable bos using the remove() method.
+
+</div>
+<br>
+<button id="b1">Delete the entire box</button>
+
+<p>This is paragraph with class "a"</p>
+<p class="b">This is paragraph with class "b"</p><br>
+<button id="b2">Remove paragraph with class "b"</button>
+
+<div id="e" style="height:100px; width: 150px; border: 3px solid green; background-color:yellow;" >
+<p>
+The box will retain but its content will be emptid using empty()</p><br>
+
+<button id="b3">Empty the content of the box.</button>
+</body>
+</html>
