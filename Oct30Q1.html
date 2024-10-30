@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Addition of elements in jQuery</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+                    $("#b1").click(function(){
+                                $("p").append("<b> Ph.D.</b>")
+                      }); 
+                  $("#b2").click(function(){
+                                $("ul").append("<li>Ph.D</li>")
+                      }); 
+      $("#b3").click(function(){
+                                $("p").prepend("<b> Dr. </b>")
+                      }); 
+      $("#b4").click(function(){
+                                $("ol").prepend("<li>Bhubaneswar</li>")
+                      }); 
+    $("#b5").click(function(){
+                                $("img").before("<b> Sikha'o'Anusandhan (Deemed to be University) </b>")
+                      }); 
+      $("#b6").click(function(){
+                                $("img").after("<b>Bhubaneswar, India</b>")
+                      }); 
+  }); 
+
+function Txt(){
+  var t1="<p> Faculty of Engineering , ITER</p>";
+var t2=$("<p></p>").text("Faculty of medical sciences, IMS.");
+var t3=document.createElement("p");
+t3.innerHTML="Faculty of management sciences, IBCS";
+$("body").append(t1, t2, t3);
+    }
+
+</script>
+</head>
+<body>
+
+<p><b>Abhilash Pati</b></p>
+<p><b>Mayur Ramgir</b></p>
+
+<ul>
+<li>B.tech</li>
+<li>MBA</li>
+<li>M.tech</li>
+</ul>
+
+
+<button id="b1">Append (paragraph)</button>
+<button id="b2">Append (List)</button>
+
+<ol>
+<li>Cuttack</li>
+<li>Barhampur</li>
+<li>Rourkela</li>
+</ol>
+
+<button id="b3">Prepend (paragraph)</button>
+<button id="b4">Prepend (List)</button>
+<br>
+<img src="https://images.squarespace-cdn.com/content/v1/5bea9edd3e2d0973ae4b2dcb/1543320941555-LLGST6UEEHFFAO89R1DV/4G3A0136.JPG?format=2500w" alt="jQuery" width="100" height="100">
+<br><br>
+
+<button id="b5">Adding text before image </button>
+<button id="b6">Adding text after image </button>
+
+<button onclick="Txt()">Append Text </button>
+</body>
+</html>
