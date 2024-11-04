@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>jQuery in CSS </title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+                    $("span").parent.css({"color": "blue", "border": "2px solid blue"});                 
+});
+</script>
+<style>
+.outermost *{
+display:block;
+color:green;
+border: 2px solid lightgrey;
+padding: 6px;
+margin:20px;   }
+</style>
+<body>
+<div class="outermost">
+    <div style="width:400px;">Great Grand Parant (div)
+          <ol>GrandParant (ol)
+                <li> Parent (li)
+                          <span> Child(span)</span>
+               </li>
+         </ol>
+    </div>
+<div style="width:400px;" > Grandparent (div)
+        <p> Parent 
+              <span> Child(span)</span>
+       </p>
+    </div>
+    </div>
+
+</body>
+<button id="b1">parent</button>
+
+</html>
