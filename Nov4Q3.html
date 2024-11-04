@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Control</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .animated-div {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            color: black;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .control-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+
+<script>
+    $(document).ready(function() {
+        // Start animation on Start button click
+        $('#startButton').click(function() {
+            $('.animated-div').animate({
+                width: '400px'
+            }, 2000);
+        });
+
+        // Stop animation on Stop button click
+        $('#stopButton').click(function() {
+            $('.animated-div').stop();
+        });
+    });
+</script>
+</head>
+<body>
+
+    <div class="animated-div">It will Resize!</div>
+
+    <div id="controls">
+        <button id="startButton" class="control-button" style="background-color: greenyellow;">Start</button>
+        <button id="stopButton" class="control-button" style="background-color: rgb(228, 96, 96);">Stop</button>
+    </div>
+
+</body>
+</html>

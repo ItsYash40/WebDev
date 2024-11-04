@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Background Color and Toggle Divs in jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif Arial, sans-serif;
+        }
+
+        .color-button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #toggleDivs {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+
+        .c1 {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            background-color: burlywood;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // Change background color on button click
+            $('#redButton').click(function () {
+                $('body').css('background-color', 'red');
+            });
+            $('#blueButton').click(function () {
+                $('body').css('background-color', 'blue');
+            });
+            $('#greenButton').click(function () {
+                $('body').css('background-color', 'green');
+            });
+
+            // Toggle visibility of all divs click
+            $('#toggleDivs').click(function () {
+                $('.c1').toggle();
+            });
+        });
+        
+    </script>
+</head>
+<body>
+
+    <h1>Change Background Color and Toggle Div Visibility</h1>
+
+    <!-- Buttons to change background color -->
+    <button id="redButton" class="color-button" style="background-color: red; color: white;">Red</button>
+    <button id="blueButton" class="color-button" style="background-color: blue; color: white;">Blue</button>
+    <button id="greenButton" class="color-button" style="background-color: green; color: white;">Green</button>
+
+    <br>
+
+    <!-- Button to toggle visibility of divs -->
+    <button id="toggleDivs" style="background-color: gray; color: white;">Toggle Div Visibility</button>
+
+    <!-- Div elements to toggle -->
+    <div class="c1">Hi, i'm Debajyoti Bhakta</div>
+    <div class="c1">My reg no is 2341002155</div>
+    <div class="c1">I'm learning jQuery now...!!</div>
+
+</body>
+</html>

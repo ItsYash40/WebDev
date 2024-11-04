@@ -1,37 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>jQuery in CSS </title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-                    $("span").parent.css({"color": "blue", "border": "2px solid blue"});                 
-});
-</script>
-<style>
-.outermost *{
-display:block;
-color:green;
-border: 2px solid lightgrey;
-padding: 6px;
-margin:20px;   }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Div Actions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .interactive-div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 5px solid black;
+            color: black;
+            text-align: center;
+            line-height: 100px; 
+            font-size: 18px;
+            cursor: pointer;
+            margin: 50px auto; 
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.interactive-div').click(function() {
+                $(this).text('Clicked!');
+            });
+
+            $('.interactive-div').dblclick(function() {
+                $(this).css('background-color', 'orange');
+            });
+
+            $('.interactive-div').mouseenter(function() {
+                $(this).css('border-color', 'green');
+            });
+
+            $('.interactive-div').mouseleave(function() {
+                $(this).css('border-color', 'black');
+            });
+        });
+    </script>
+
+</head>
 <body>
-<div class="outermost">
-    <div style="width:400px;">Great Grand Parant (div)
-          <ol>GrandParant (ol)
-                <li> Parent (li)
-                          <span> Child(span)</span>
-               </li>
-         </ol>
-    </div>
-<div style="width:400px;" > Grandparent (div)
-        <p> Parent 
-              <span> Child(span)</span>
-       </p>
-    </div>
-    </div>
+
+    <div class="interactive-div">Click or Hover here!</div>
 
 </body>
-<button id="b1">parent</button>
-
 </html>
