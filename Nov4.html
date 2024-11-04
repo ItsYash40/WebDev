@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>jQuery in CSS </title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+                    $("#b1").click(function(){
+                   $("h1,p").addClass("red");
+                  $("div").addClass("size");
+});
+                     $("#b2").click(function(){
+                   $("h1,p").removeClass("red");
+
+    });
+                $("#b3").click(function(){
+                   $("h1,p").toggleClass("red");
+
+    });           
+           $("#b4").click(function(){
+            alert("background color="+$("#p1").css("background-color"));
+            alert("background color="+$("#p2").css("background-color"));
+            alert("background color="+$("#p3").css("background-color"));
+
+    });   
+         $("#b5").click(function(){
+         $("#p1").css("background-color","red");
+         $("#p2").css("background-color","blue");
+         $("#p3").css("background-color","pink");
+});
+});
+</script>
+<style>
+.red{color:red;}
+.size{font-size: xx-small;}
+</style>
+</head>
+<body>
+<h1>Heading1 in Red</h1>
+<h2>Heading2</h2>
+<p>Paragraph1 with red</p>
+<p>Paragraph2 with red</p>
+<div> Hi,I am inside div element.</div><br>
+<button id="b1">Add 'red' color and 'size' class</button>
+</br>
+<h1 class="red">Heading1 in red</h1>
+<h2>Heading2</h2>
+<p class="red">Paragraph1 with red</p>
+<p class="red">Paragraph2 with red</p>
+<div>This paragraph has no initial color</div><br>
+<button id="b2">Remove 'red' class</button><br>
+<h1>Heading1 in red</h1>
+<h2>Heading2</h2>
+<p>Paragraph1 with red</p>
+<p>Paragraph2 with red</p>
+<div>This paragraph has no initial color</div><br>
+<button id="b3">Toggle 'red' class</button>
+<h1> Display and change CSS Properties using jQuery</h1>
+<p id="p1" style="background-color:yellow;">Paragraph with YELLOW background.</p>
+<p id="p2" style="background-color:orange;">Paragraph with ORANGE background.</p>
+<p id="p3" style="background-color:green;">Paragraph with GREEN background.</p>
+<p>Paragraph with no background color</p>
+<button id="b4">Show the background color of each paragraph</button>
+<button id="b5">Change the background color of each paragraph</button>
+
+</body>
+</html>
