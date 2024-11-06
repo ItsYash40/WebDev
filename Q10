@@ -1,0 +1,96 @@
+<html>
+<head>
+   
+    <title>Debajyoti Bhakta_2341002155_Q10 (Sign-Up Form)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#signupForm').submit(function(event) {
+                event.preventDefault(); 
+                $('#errorMessage').text('');
+                var username = $('#username').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
+                var errorMessage = '';
+                if (username === "") {
+                    errorMessage += 'Username is required.<br>';
+                }
+                if (email === "") {
+                    errorMessage += 'Email is required.<br>';
+                }
+                if (password === "") {
+                    errorMessage += 'Password is required.<br>';
+                }
+                // Validate email format 
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email !== "" && !emailPattern.test(email)) {
+                    errorMessage += 'Please enter a valid email address.<br>';
+                }
+                if (errorMessage !== '') {   //For error msg
+                    $('#errorMessage').html(errorMessage);
+                } else {
+                    alert('Form submitted successfully!'); 
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+            border-color: seagreen;  /* Change border color on hover */
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign-Up Form</h1>
+    <form id="signupForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter your username" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email ID" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Create a strong password" id="password" name="password">
+        </div>
+        <input type="submit" value="Sign Up">
+        <div class="error" id="errorMessage"></div>
+    </form>
+</body>
+</html>
