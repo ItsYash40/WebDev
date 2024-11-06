@@ -1,56 +1,42 @@
+<html>
 
-<html >
 <head>
-  
-    <title>Debajyoti Bhakta_Assignment1_Q4-report table</title>
+    <title>Debajyoti Bhakta_2341002155_Q4 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fetchTextButton').click(function () {
+                var textContent = $('#textContent').text();
+                alert('Text content: ' + textContent);
+            });
+            $('#fetchHtmlButton').click(function () {
+                var htmlContent = $('#htmlContent').html();
+                alert('HTML content: ' + htmlContent);
+            });
+        });
+    </script>
     <style>
-        td {
-            text-align: center;
-        }
-        table,
-        th,
-        td {
-            border: 2px solid black;
-            border-collapse: collapse;
+        .content {
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
-    <h1>MY WEEKLY SCHEDULE</h1>
-    <table>
-        <tr>
-            <th>DAY</th>
-            <th>ACTIVITIES</th>
-        </tr>
-        <tr>
-            <td>Sunday</td>
-            <td>Exercise, Revise, Playing</td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Study , Homework</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td>Study,Homework </td>
-        </tr>
-        <tr>
-            <td>Wednesday</td>
-            <td>Study, Music class</td>
-        </tr>
-        <tr>
-            <td>Thursday</td>
-            <td>Study,Homework</td>
-        </tr>
-        <tr>
-            <td>Friday</td>
-            <td>Study, Drawing class</td>
-        </tr>
-        <tr>
-            <td>Saturday</td>
-            <td>Study, Short trip</td>
-        </tr>
-    </table> <br>
-    
+    <button id="fetchTextButton">Fetch Text</butto> <br>
+        <button id="fetchHtmlButton">Fetch HTML</button>
+        <div class="content">
+            <div id="htmlContent">
+                <strong>This is HTML content</strong>
+                <p>Paragraph inside div with <em>HTML</em> content.</p>
+            </div>
+        </div>
+        <div class="content">
+            <p id="textContent">This is just plain text inside a paragraph.</p>
+        </div>
+       
 </body>
+
 </html>
