@@ -1,25 +1,40 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Debajyoti Bhakta_Assignment1_Q8 Personal Achievements</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debajyoti Bhakta_2341002155_Q8 (Remove Element by ID)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#removeButton').click(function() {
+                var idToRemove = $('#elementId').val();
+                $('#' + idToRemove).remove();
+                $('#elementId').val('');
+            });
+        });
+    </script>
+    <style>
+        #container {
+            margin-top: 20px;
+        }
+        .item {
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>My Achievements</h1>
-   <p> <blockquote>Talk to yourself once in a day, otherwise you may miss meeting an intelligent person in this world.
-    </blockquote> - Swami Vivekananda</p>
-
-    <p><abbr title="National Talent Search Exam" alt="NTSE">NTSE</abbr> scholarship achiever in 2018 & 2020.</p>
-    
-    
-        <p><abbr title="Ramakrishna Mission Vidyapith ">RKMV </abbr>State Level Quiz on Swami Vivekananda 1st prize achiever in 2018.</p>
-        <img height="200"
-            src="Quiz.jpg"
-            alt="RKMV ">
-
-            <p><abbr title="Asutosh Charitable Fund ">ASCF </abbr> Block  Level singing champion in 2017.</p>
-            <img height="200"
-                src="Music.jpg"
-                alt="ASCF">
+    <h1>Remove Element by ID</h1>
+    <div id="container">
+        <div class="item" id="item1">1. Auditorium</div>
+        <div class="item" id="item2">2. E Block</div>
+        <div class="item" id="item3">3. Sports Complex</div>
+        <div class="item" id="item4">4. Lawn</div>
+        <div class="item" id="item5">5. Library</div>
+    </div>
+    <input type="text" id="elementId" placeholder="Enter ID to remove">
+    <button id="removeButton">Remove Element</button>
 </body>
 </html>
