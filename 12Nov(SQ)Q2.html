@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <title>Sample Question-2</title>
+    <style>
+            * {
+            margin: 0;
+            padding: 60px;
+        }
+
+        body {
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500vh;
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="password"] invalid {
+            border-color: red;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 48%;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: gray;
+        }
+
+        input[type="reset"] {
+            background-color: gray;
+        }
+
+        select {
+            background-color: white;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #555;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!--1a-->
+        <h2>Student Registration for SAAT-2024</h2>
+        <img src="https://career.webindia123.com/career/institutes/aspupload/Uploads/all-states/12815/logo.jpg"
+            alt="soa-logo.png" height="70px" width="90px"><br><br>
+        <form method="POST">
+            <input type="text" name="name" placeholder="First Name" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="middle Name" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="last Name" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="father's Name" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="mother's Name" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="Address" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="number" name="number" placeholder="(+91)xxxxxxxxx" min="9" max="11">
+            <div class="hint">Hint: Only letters and spaces allowed in the name.</div>
+            <input type="email" name="email" placeholder="Email" title="Please enter a valid email" required>
+            <input type="text" name="name" placeholder="10th percentage" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            <input type="text" name="name" placeholder="12th percentage" pattern="[A-Za-z\s]+"
+                title="Only letters and spaces allowed" required>
+            < <input type="text" name="name" placeholder="UserName" pattern="[A-Za-z\s]+"
+                title="Please use your regd number as username" required>
+                </h4>
+                <input type="password" name="password" placeholder="Password"
+                    pattern="(?=.\d) (?=.[a-z]) (?=.[A-Z]) (?=.[@#$%^&+=]).{8,}"
+                    title="Password must contain at least 8 characters, including 1 uppercase, 1 lowercase, 1 digit, and 1 special character"
+                    required>
+                <div class="hint">Hint: Must be at least 8 characters with at least 1 uppercase letter, 1 lowercase
+                    letter, 1 digit, and 1 special symbol.</div>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <div class="hint">Hint: Confirm password must match the entered password.</div>
+                <div class="radio-group">
+                    <select name="location" required>
+                        <option value="" disabled selected>Select Location</option>
+                        <option value="Balasore"> Balasore </option>
+                        <option value="Rourkela"> Rourkela</option>
+                        <option value="Sambalpur"> Sambalpur</option>
+                        <option value="Berhampur"> Berhampur </option>
+                        <option value="Rayagada"> Rayagada </option>
+                        <option value="ParlaKhemundi"> Parlakhemundi </option>
+                        <option value="Bhawanipatana"> Bhawanipatana </option>
+                        <option value="Puri"> Puri </option>
+                        <option value="Cuttack"> Cuttack </option>
+                        <option value="Bhubaneswar"> Bhubaneswar </option>
+                    </select>
+                    <div class="button-group">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+        </form>
+    </div>
+</body>
+
+</html>
