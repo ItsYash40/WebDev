@@ -1,6 +1,18 @@
  <html>
  <head>
  <title>MyeShop</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" 
+></script>
+  <script>
+   $( document ).ready(function() {
+    $( "#searchbtn").click(function() {
+     alert("Search button is clicked. Value of Search Text is " + 
+$("#searchtxt").val() + " Category : " + $("#categorysel").children(":selected").
+ html());
+    });
+    
+   });
+  </script>
  </head>
  <body style="background-color:#A2E9FF;">
  <h1 style="text-align:center;">Welcome to MyeShop</h1>
@@ -11,16 +23,16 @@
 height="50px" style="border-radius: 70px;"></td>
  <td><form><input type="text" placeholder="Search.."></form></td>
  <td>
- <select>
+ <select id="categorysel">
  <option>All</option>
  <option>CLOTHES </option>
  <option>FOOD AND BEVERAGES </option>
- <option>HEALTH & BEAUTY </option>
- <option>SPORTS & LEISURE </option>
- <option>BOOKS & ENTERTAINMENTS </option>
+ <option>HEALTH AND BEAUTY </option>
+ <option>SPORTS AND LEISURE </option>
+ <option>BOOKS AND ENTERTAINMENTS </option>
  </select>
  </td>
- <td><button>Search</button></td>
+ <td><button id="searchbtn">Search</button></td>
  <td><span><i> [ 0 ] Items in your cart </i></span></td>
  <td><a style="background-color: red;color: white;padding: 1em 1.5em;
 text-decoration: none;text-transform: uppercase;" href="home.html">Home</a></td>
