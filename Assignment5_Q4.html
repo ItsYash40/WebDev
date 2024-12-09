@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System - Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 50px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .nav-item a {
+            color: white;
+        }
+        .nav-item a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">ITER School Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Admission</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Achievements
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="gallery-btn">Gallery</a>
+                    <!-- More items can be added here -->
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Alumni</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Achievement Gallery Section (Hidden by default) -->
+<div id="achievement-gallery" class="container mt-5" style="display: none;">
+    <h2 class="text-center mb-4">Achievement Gallery</h2>
+
+    <!-- Bootstrap Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1500x600/007bff/FFFFFF?text=Achievement+1" class="d-block w-100" alt="Achievement 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1500x600/28a745/FFFFFF?text=Achievement+2" class="d-block w-100" alt="Achievement 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1500x600/ffc107/FFFFFF?text=Achievement+3" class="d-block w-100" alt="Achievement 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Login Section (For the sake of demonstration, to show the page after login) -->
+<div class="container mt-5">
+    <h3 class="text-center">Welcome to the School Management System</h3>
+    <p class="text-center">Please log in to access the dashboard.</p>
+
+    <!-- Sample login button (this would be visible after login) -->
+    <div class="text-center">
+        <button class="btn btn-primary" id="login-btn">Login</button>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Simulating a successful login with a button click
+        $('#login-btn').click(function() {
+            // Hide the login section and show the main dashboard
+            $('.container.mt-5').hide();
+            $('#navbarNav').show();
+            $('.navbar-nav').show();
+            $('#login-btn').hide();
+        });
+
+        // Show the achievement gallery when "Gallery" is clicked
+        $('#gallery-btn').click(function() {
+            $('#achievement-gallery').toggle(); // Toggle visibility of the gallery
+        });
+    });
+</script>
+
+</body>
+</html>
